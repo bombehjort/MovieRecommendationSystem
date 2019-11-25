@@ -12,6 +12,8 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import movierecsys.be.Movie;
 
 /**
@@ -115,7 +117,14 @@ public class MovieDAO
      */
     private Movie getMovie(int id)
     {
-        //TODO Get one Movie
+        try{
+        List<Movie> movies = getAllMovies();
+        for(Movie movie : movies){
+        
+        }
+        } catch (IOException ex) {
+            Logger.getLogger(MovieDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
         return null;
     }
 
